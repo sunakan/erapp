@@ -1,0 +1,16 @@
+---
+name: build
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    container:
+      image: ruby:2.6-slim
+    steps:
+      - uses: actions/checkout@v1
+      - run: gem install bundler --no-document
+      - run: bundle install --jobs 4 --retry 3 --deployment
