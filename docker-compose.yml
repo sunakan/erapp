@@ -3,8 +3,9 @@ version: "3.7"
 
 services:
   app:
+    command: ["bundle", "exec", "ruby", "app.rb", "-o", "0.0.0.0"]
     build: .
     ports:
-      - 3000:3000
+      - 4567:4567
     volumes:
       - ./:/app
