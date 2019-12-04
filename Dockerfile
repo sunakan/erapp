@@ -9,5 +9,7 @@ RUN gem uninstall bundler \
   && gem install bundler:2.0.2 \
   && bundle install --path vendor/bundle
 
+COPY app.rb ./
+
 EXPOSE 4567
 CMD ["bundle", "exec", "ruby", "app.rb", "-o", "0.0.0.0"]
