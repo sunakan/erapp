@@ -6,7 +6,7 @@ resource "aws_iam_policy" "deploy_policy" {
 }
 
 resource "aws_iam_group" "deploy_group" {
-  name = "deploy_ecr"
+  name = "deploy-ecr"
 }
 
 resource "aws_iam_group_policy_attachment" "attach_deploy" {
