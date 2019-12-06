@@ -9,7 +9,7 @@ init:
 get:
 	WORKING_DIR=${WORKING_DIR} ENTRYPOINT=terraform DIR=${DIR} docker-compose run --rm tf get
 fmt:
-	WORKING_DIR=${WORKING_DIR} ENTRYPOINT=terraform DIR=${DIR} docker-compose run --rm tf fmt
+	WORKING_DIR=${WORKING_DIR} ENTRYPOINT=terraform DIR=${DIR} docker-compose run --rm tf fmt -recursive
 plan:
 	WORKING_DIR=${WORKING_DIR} ENTRYPOINT=terraform DIR=${DIR} docker-compose run --rm tf plan ${ARGS}
 apply:
