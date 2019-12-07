@@ -23,3 +23,9 @@ resource "aws_iam_group_membership" "deploy_membership" {
   users = [aws_iam_user.deploy_user.name]
   group = aws_iam_group.deploy_group.name
 }
+
+resource "aws_iam_role" "ecs_instance_role" {
+  name = "ecs-instance-role"
+  path = "/"
+  assume_role_policy = file("./iam/policies/ec2_assume_role.json")
+}
