@@ -4,11 +4,12 @@
         {
             "Effect": "Allow",
             "Action": [
-                "ecr:PutImage",
+                "ecr:GetAuthorizationToken",
                 "ecr:InitiateLayerUpload",
                 "ecr:UploadLayerPart",
                 "ecr:CompleteLayerUpload",
-                "ecr:BatchCheckLayerAvailability"
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:PutImage"
             ],
             "Resource": "*"
         }
