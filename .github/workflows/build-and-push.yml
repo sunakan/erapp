@@ -31,4 +31,5 @@ jobs:
           CURRENT_BRANCH: ${{ steps.extract_branch.outputs.branch_name }}
           DOCKER_IMAGE: ${{ secrets.AWS_ECR_REPO_NAME }}
           AWS_ECR_REPO_NAME: ${{ secrets.AWS_ECR_REPO_NAME }}
+          RUBY_IMAGE_TAG: 2.6-slim
         run: bash ./build-deploy/build.sh | tail -1 | bash ./build-deploy/push-to-ecr.sh

@@ -1,9 +1,9 @@
 DOCKER_IMAGE=sunakan/erapp
-RUBY_VERSION_TAG=2.6-slim
+RUBY_IMAGE_TAG=2.6-slim
 AWS_ECR_REPO_NAME=sunakan/erapp
 
 export DOCKER_IMAGE
-export RUBY_VERSION_TAG
+export RUBY_IMAGE_TAG
 export AWS_ECR_REPO_NAME
 
 login:

@@ -25,7 +25,7 @@ IMAGE_TAG="${CURRENT_BRANCH}--${COMMIT_ID}"
 
 docker build \
   --tag ${DOCKER_IMAGE}:${IMAGE_TAG} \
-  --build-arg RUBY_VERSION_TAG=${RUBY_VERSION_TAG} \
+  --build-arg RUBY_IMAGE_TAG=${RUBY_IMAGE_TAG} \
   .
 
 docker tag ${DOCKER_IMAGE}:${IMAGE_TAG} ${DOCKER_IMAGE}:latest
