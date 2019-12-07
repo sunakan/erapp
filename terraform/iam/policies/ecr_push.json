@@ -4,9 +4,11 @@
         {
             "Effect": "Allow",
             "Action": [
-                "ecr:CreateRepository",
-                "ecr:GetAuthorizationToken",
-                "ecr:PutImage"
+                "ecr:PutImage",
+                "ecr:InitiateLayerUpload",
+                "ecr:UploadLayerPart",
+                "ecr:CompleteLayerUpload",
+                "ecr:BatchCheckLayerAvailability"
             ],
             "Resource": "*"
         }
