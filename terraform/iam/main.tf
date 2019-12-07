@@ -25,7 +25,12 @@ resource "aws_iam_group_membership" "deploy_membership" {
 }
 
 resource "aws_iam_role" "ecs_instance_role" {
-  name = "ecs-instance-role"
-  path = "/"
+  name               = "ecs-instance-role"
+  path               = "/"
   assume_role_policy = file("./iam/policies/ec2_assume_role.json")
+}
+
+resource "aws_iam_instance_profile" "ecs_instance_profile" {
+  name = "ecs-instance-profile"
+  role = aws_iam_role.ecs_instance_role.name
 }
