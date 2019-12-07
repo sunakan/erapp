@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# 実行例
-# echo "${HOGE}" | bash ./build.sh
-# or
-# DOCKER_IMAGE="${HOGE}" bash ./build.sh
-
 # -u オプションは未定義変数を使うとError
 set -u
 
