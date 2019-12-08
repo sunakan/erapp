@@ -36,10 +36,10 @@ resource "aws_iam_instance_profile" "ecs_instance_profile" {
 }
 
 resource "aws_iam_policy" "ecs_instance_policy" {
-  name = "ecs-instance-policy"
-  path = "/"
+  name        = "ecs-instance-policy"
+  path        = "/"
   description = ""
-  policy = file("policies/ecs_instance.json")
+  policy      = file("policies/ecs_instance.json")
 }
 
 resource "aws_iam_role_policy_attachment" "ecs_instance_role_attach" {

@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "erapp"
-    key = "terraform/iam/terraform.tfstate"
+    key    = "terraform/iam/terraform.tfstate"
     region = "ap-northeast-1"
   }
 }
